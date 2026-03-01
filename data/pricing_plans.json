@@ -1,0 +1,1272 @@
+{
+    "title": "subscriptions",
+    "india": [
+      {
+        "id": 1,
+        "planName": "Basic",
+        "planTitle" : "4 Classes / Month",
+        "MRP": 4000,
+        "sellingPrice": 3600,
+        "offer": 10,
+        "currencySymbol": "₹",
+        "paymentLink": "https://pages.razorpay.com/4_classes",
+        "classDuration": 60,
+        "classCount": 4,
+        "validity": "1 Month",
+        "benefits1": {
+          "content": "Classes can be split among family & friends",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"One Grade Exam fees on the house",
+        "display":"d-none"
+      },
+        "status":"active"
+      },
+      {
+        "id": 2,
+        "planName": "Most-Selling",
+        "planTitle" : "12 Classes / Quarter",
+        "MRP": 12000,
+        "sellingPrice": 9600,
+        "offer": 20,
+        "currencySymbol": "₹",
+        "paymentLink": "https://pages.razorpay.com/12_classes",
+        "classDuration": 60,
+        "classCount": 12,
+        "validity": "3 months",
+        "benefits1": {
+          "content": "Classes can be split among family & friends",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"One Grade Exam fees on the house",
+        "display":"d-none"
+      },
+        "status":"active"
+
+      },
+      {
+        "id": 3,
+        "planName": "Standard",
+        "planTitle" : "8 Classes / Month",
+        "MRP": 6000,
+        "sellingPrice": 5600,
+        "offer": 7,
+        "currencySymbol": "₹",
+        "paymentLink": "https://pages.razorpay.com/8_classes",
+        "classDuration": 45,
+        "classCount": 8,
+        "validity": "1 month",
+        "benefits1": {
+          "content": "Classes can be split among family & friends",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"One Grade Exam fees on the house",
+        "display":"d-none"
+      },
+        "status":"active"
+
+      },
+      {
+        "id": 4,
+        "planName": "value-pack",
+        "planTitle" : "24 class / Quarter",
+        "MRP": 18000,
+        "sellingPrice": 14500,
+        "offer": 19,
+        "currencySymbol": "₹",
+        "paymentLink": "https://pages.razorpay.com/24_classes",
+        "classDuration": 45,
+        "classCount": 24,
+        "validity": "3 months",
+        "benefits1": {
+          "content": "Classes can be split among family & friends",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"One Grade Exam fees on the house",
+        "display":"d-none"
+      },
+        "status":"active"
+
+      },
+      {
+        "id": 5,
+        "planName": "VIP",
+        "planTitle" : "48 Classes",
+        "MRP": null,
+        "sellingPrice": 39999,
+        "offer": "d-none",
+        "currencySymbol": "₹",
+        "paymentLink": "https://rzp.io/l/vip-inr",
+        "classDuration": 45,
+        "classCount": 48,
+        "validity": "2 years",
+        "benefits1": {
+            "content": "Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-none"
+      },
+        "status":"active"
+
+
+      },
+      {
+        "id": 6,
+        "planName": "VVIP",
+        "planTitle" : "96 Classes",
+        "MRP": null,
+        "sellingPrice": 79999,
+        "offer": "d-none",
+        "currencySymbol": "₹",
+        "paymentLink": "https://rzp.io/l/vvip-inr",
+        "classDuration": 45,
+        "classCount": 96,
+        "validity": "3 years",
+        "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-block"
+        },
+        "status":"active"
+      }
+    ],
+    "usa": [
+        {
+          "id": 1,
+          "planName": "Basic",
+          "planTitle" : "4 Classes / Month",
+          "MRP": 79,
+          "sellingPrice": 49,
+          "offer": 33,
+          "currencySymbol": "$",
+          "paymentLink": "https://pages.razorpay.com/4class-USD",
+          "classDuration": 60,
+          "classCount": 4,
+          "validity": "1 Month",
+          "benefits1": {
+            "content": "Classes can be split among family & friends",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 2,
+          "planName": "Most-Selling",
+          "planTitle" : "12 Classes / Quarter",
+          "MRP": 239,
+          "sellingPrice": 129,
+          "offer": 46,
+          "currencySymbol": "$",
+          "paymentLink": "https://pages.razorpay.com/12class-USD",
+          "classDuration": 60,
+          "classCount": 12,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "Classes can be split among family & friends",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 3,
+          "planName": "Standard",
+          "planTitle" : "8 Classes / Month",
+          "MRP": 139,
+          "sellingPrice": 79,
+          "offer": 43,
+          "currencySymbol": "$",
+          "paymentLink": "https://pages.razorpay.com/8class-USD",
+          "classDuration": 45,
+          "classCount": 8,
+          "validity": "1 month",
+          "benefits1": {
+            "content": "Classes can be split among family & friends",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 4,
+          "planName": "Value-Pack",
+          "planTitle" : "24 Classes / Quarter",
+          "MRP": 419,
+          "sellingPrice": 209,
+          "offer": 50,
+          "currencySymbol": "$",
+          "paymentLink": "https://pages.razorpay.com/24class-USD",
+          "classDuration": 45,
+          "classCount": 24,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "Classes can be split among family & friends",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 5,
+          "planName": "VIP",
+          "planTitle" : "48 Classes",
+          "MRP": null,
+          "sellingPrice": 499,
+          "offer": "d-none",
+          "currencySymbol": "$",
+          "paymentLink": "https://rzp.io/l/vip-usa",
+          "classDuration": 45,
+          "classCount": 48,
+          "validity": "2 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-none"
+        },
+          "status":"active"
+  
+  
+        },
+        {
+          "id": 6,
+          "planName": "VVIP",
+          "planTitle" : "96 Classes",
+          "MRP": null,
+          "sellingPrice": 999,
+          "offer": null,
+          "currencySymbol": "$",
+          "paymentLink": "https://rzp.io/l/vvip-usa",
+          "classDuration": 45,
+          "classCount": 96,
+          "validity": "3 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-block"
+        },
+          "status":"active"
+        }
+      ],
+    "uk": [
+        {
+          "id": 1,
+          "planName": "Basic",
+          "planTitle" : "4 Classes / Month",
+          "MRP": 59,
+          "sellingPrice": 39,
+          "offer": 34,
+          "currencySymbol": "£",
+          "paymentLink": "https://pages.razorpay.com/4class-UK",
+          "classDuration": 60,
+          "classCount": 4,
+          "validity": "1 Month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 2,
+          "planName": "Most-Selling",
+          "planTitle" : "12 Classes / Quarter",
+          "MRP": 179,
+          "sellingPrice": 99,
+          "offer": 45,
+          "currencySymbol": "£",
+          "paymentLink": "https://pages.razorpay.com/12class-UK",
+          "classDuration": 60,
+          "classCount": 12,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 3,
+          "planName": "Standard",
+          "planTitle" : "8 Classes / Month",
+          "MRP": 99,
+          "sellingPrice": 66,
+          "offer": 33,
+          "currencySymbol": "£",
+          "paymentLink": "https://pages.razorpay.com/8class-UK",
+          "classDuration": 45,
+          "classCount": 8,
+          "validity": "1 month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 4,
+          "planName": "Value-Pack",
+          "planTitle" : "24 Classes / Quarter",
+          "MRP": 299,
+          "sellingPrice": 159,
+          "offer": 47,
+          "currencySymbol": "£",
+          "paymentLink": "https://pages.razorpay.com/24class-UK",
+          "classDuration": 45,
+          "classCount": 24,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 5,
+          "planName": "VIP",
+          "planTitle" : "48 Classes",
+          "MRP": null,
+          "sellingPrice": 399,
+          "offer": "d-none",
+          "currencySymbol": "£",
+          "paymentLink": "https://rzp.io/l/vip-uk",
+          "classDuration": 45,
+          "classCount": 48,
+          "validity": "2 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-none"
+        },
+          "status":"active"
+  
+  
+        },
+        {
+          "id": 6,
+          "planName": "VVIP",
+          "planTitle" : "96 Classes",
+          "MRP": null,
+          "sellingPrice": 799,
+          "offer": null,
+          "currencySymbol": "£",
+          "paymentLink": "https://rzp.io/l/vvip-uk",
+          "classDuration": 45,
+          "classCount": 96,
+          "validity": "3 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-block"
+        },
+          "status":"active"
+        }
+      ],
+    "australia": [
+        {
+          "id": 1,
+          "planName": "Basic",
+          "planTitle" : "4 Classes / Month",
+          "MRP": 79,
+          "sellingPrice": 59,
+          "offer": 25,
+          "currencySymbol": "A$",
+          "paymentLink": "https://pages.razorpay.com/4class-AUS",
+          "classDuration": 60,
+          "classCount": 4,
+          "validity": "1 Month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 2,
+          "planName": "Most-Selling",
+          "planTitle" : "12 Classes / Quarter",
+          "MRP": 239,
+          "sellingPrice": 149,
+          "offer": 38,
+          "currencySymbol": "A$",
+          "paymentLink": "https://pages.razorpay.com/12class-AUS",
+          "classDuration": 60,
+          "classCount": 12,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 3,
+          "planName": "Standard",
+          "planTitle" : "8 Classes / Month",
+          "MRP": 139,
+          "sellingPrice": 99,
+          "offer": 28,
+          "currencySymbol": "A$",
+          "paymentLink": "https://pages.razorpay.com/8class-AUS",
+          "classDuration": 45,
+          "classCount": 8,
+          "validity": "1 month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 4,
+          "planName": "Value-Pack",
+          "planTitle" : "24 Classes / Quarter",
+          "MRP": 419,
+          "sellingPrice": 249,
+          "offer": 40,
+          "currencySymbol": "A$",
+          "paymentLink": "https://pages.razorpay.com/24class-AUS",
+          "classDuration": 45,
+          "classCount": 24,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 5,
+          "planName": "VIP",
+          "planTitle" : "48 Classes",
+          "MRP": null,
+          "sellingPrice": 799,
+          "offer": "d-none",
+          "currencySymbol": "A$",
+          "paymentLink": "https://rzp.io/l/vip-aus",
+          "classDuration": 45,
+          "classCount": 48,
+          "validity": "2 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-none"
+        },
+          "status":"active"
+  
+  
+        },
+        {
+          "id": 6,
+          "planName": "VVIP",
+          "planTitle" : "96 Classes",
+          "MRP": null,
+          "sellingPrice": 1599,
+          "offer": null,
+          "currencySymbol": "A$",
+          "paymentLink": "https://rzp.io/l/vvip-aus",
+          "classDuration": 45,
+          "classCount": 96,
+          "validity": "3 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-block"
+        },
+          "status":"active"
+        }
+      ],
+    "canada": [
+        {
+          "id": 1,
+          "planName": "Basic",
+          "planTitle" : "4 Classes / Month",
+          "MRP": 109,
+          "sellingPrice": 69,
+          "offer": 37,
+          "currencySymbol": "C$",
+          "paymentLink": "https://rzp.io/l/4class-CAD",
+          "classDuration": 60,
+          "classCount": 4,
+          "validity": "1 Month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 2,
+          "planName": "Most-Selling",
+          "planTitle" : "12 Classes / Quarter",
+          "MRP": 319,
+          "sellingPrice": 169,
+          "offer": 47,
+          "currencySymbol": "C$",
+          "paymentLink": "https://rzp.io/l/12class-CAD",
+          "classDuration": 60,
+          "classCount": 12,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 3,
+          "planName": "Standard",
+          "planTitle" : "8 Classes / Month",
+          "MRP": 189,
+          "sellingPrice": 119,
+          "offer": 37,
+          "currencySymbol": "C$",
+          "paymentLink": "https://rzp.io/l/8class-CAD",
+          "classDuration": 45,
+          "classCount": 8,
+          "validity": "1 month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 4,
+          "planName": "Value-Pack",
+          "planTitle" : "24 Classes / Quarter",
+          "MRP": 559,
+          "sellingPrice": 279,
+          "offer": 50,
+          "currencySymbol": "C$",
+          "paymentLink": "https://rzp.io/l/24class-CAD",
+          "classDuration": 45,
+          "classCount": 24,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 5,
+          "planName": "VIP",
+          "planTitle" : "48 Classes",
+          "MRP": null,
+          "sellingPrice": null,
+          "offer": "d-none",
+          "currencySymbol": "C$",
+          "paymentLink": "",
+          "classDuration": 45,
+          "classCount": 48,
+          "validity": "2 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-none"
+        },
+          "status":"inActive"
+  
+  
+        },
+        {
+          "id": 6,
+          "planName": "VVIP",
+          "planTitle" : "96 Classes",
+          "MRP": null,
+          "sellingPrice": null,
+          "offer": null,
+          "currencySymbol": "C$",
+          "paymentLink": "",
+          "classDuration": 45,
+          "classCount": 96,
+          "validity": "3 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-block"
+        },
+          "status":"inActive"
+        }
+      ],
+    "euro": [
+        {
+          "id": 1,
+          "planName": "Basic",
+          "planTitle" : "4 Classes / Month",
+          "MRP": 69,
+          "sellingPrice": 49,
+          "offer": 36,
+          "currencySymbol": "€",
+          "paymentLink": "https://rzp.io/l/4class-euro",
+          "classDuration": 60,
+          "classCount": 4,
+          "validity": "1 Month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 2,
+          "planName": "Most-Selling",
+          "planTitle" : "12 Classes / Quarter",
+          "MRP": 199,
+          "sellingPrice": 129,
+          "offer": 45,
+          "currencySymbol": "€",
+          "paymentLink": "https://rzp.io/l/12class-euro",
+          "classDuration": 60,
+          "classCount": 12,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 3,
+          "planName": "Standard",
+          "planTitle" : "8 Classes / Month",
+          "MRP": 119,
+          "sellingPrice": 69,
+          "offer": 42,
+          "currencySymbol": "€",
+          "paymentLink": "https://rzp.io/l/8class-euro",
+          "classDuration": 45,
+          "classCount": 8,
+          "validity": "1 month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 4,
+          "planName": "Value-Pack",
+          "planTitle" : "24 Classes / Quarter",
+          "MRP": 359,
+          "sellingPrice": 209,
+          "offer": 50,
+          "currencySymbol": "€",
+          "paymentLink": "https://rzp.io/l/24class-euro",
+          "classDuration": 45,
+          "classCount": 24,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 5,
+          "planName": "VIP",
+          "planTitle" : "48 Classes",
+          "MRP": null,
+          "sellingPrice": null,
+          "offer": "d-none",
+          "currencySymbol": "€",
+          "paymentLink": "",
+          "classDuration": 45,
+          "classCount": 48,
+          "validity": "2 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-none"
+        },
+          "status":"inActive"
+  
+  
+        },
+        {
+          "id": 6,
+          "planName": "VVIP",
+          "planTitle" : "96 Classes",
+          "MRP": null,
+          "sellingPrice": null,
+          "offer": null,
+          "currencySymbol": "€",
+          "paymentLink": "",
+          "classDuration": 45,
+          "classCount": 96,
+          "validity": "3 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-block"
+        },
+          "status":"inActive"
+        }
+      ],
+    "singapore": [
+        {
+          "id": 1,
+          "planName": "Basic",
+          "planTitle" : "4 Classes / Month",
+          "MRP": 79,
+          "sellingPrice": 59,
+          "offer": 25,
+          "currencySymbol": "S$",
+          "paymentLink": "https://rzp.io/l/4class-SD",
+          "classDuration": 60,
+          "classCount": 4,
+          "validity": "1 Month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 2,
+          "planName": "Most-Selling",
+          "planTitle" : "12 Classes / Quarter",
+          "MRP": 239,
+          "sellingPrice": 149,
+          "offer": 38,
+          "currencySymbol": "S$",
+          "paymentLink": "https://rzp.io/l/12class-SD",
+          "classDuration": 60,
+          "classCount": 12,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 3,
+          "planName": "Standard",
+          "planTitle" : "8 Classes / Month",
+          "MRP": 139,
+          "sellingPrice": 99,
+          "offer": 28,
+          "currencySymbol": "S$",
+          "paymentLink": "https://rzp.io/l/8class-SD",
+          "classDuration": 45,
+          "classCount": 8,
+          "validity": "1 month",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 4,
+          "planName": "Value-Pack",
+          "planTitle" : "24 Classes / Quarter",
+          "MRP": 419,
+          "sellingPrice": 249,
+          "offer": 40,
+          "currencySymbol": "S$",
+          "paymentLink": "https://rzp.io/l/24class-SD",
+          "classDuration": 45,
+          "classCount": 24,
+          "validity": "3 months",
+          "benefits1": {
+            "content": "",
+            "display": "d-none"
+        },
+        "benefits2": {
+          "content":"",
+          "display":"d-none"
+        },
+          "status":"active"
+  
+        },
+        {
+          "id": 5,
+          "planName": "VIP - 48 Classes",
+          "planTitle" : "48 Classes / Month",
+          "MRP": null,
+          "sellingPrice": 799,
+          "offer": "d-none",
+          "currencySymbol": "S$",
+          "paymentLink": "https://rzp.io/l/vip-singapore",
+          "classDuration": 45,
+          "classCount": 48,
+          "validity": "2 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-none"
+        },
+          "status":"active"
+  
+  
+        },
+        {
+          "id": 6,
+          "planName": "VVIP",
+          "planTitle" : "96 Classes / Month",
+          "MRP": null,
+          "sellingPrice": 1599,
+          "offer": null,
+          "currencySymbol": "S$",
+          "paymentLink": "https://rzp.io/l/vvip-singapore",
+          "classDuration": 45,
+          "classCount": 96,
+          "validity": "3 years",
+          "benefits1": {
+            "content":"Classes can be split among family & friends",
+            "display": "d-block"
+        },
+        "benefits2": {
+            "content":"One Grade Exam fees on the house",
+            "display":"d-block"
+        },
+          "status":"active"
+        }
+      ],
+    "malaysia": [
+      {
+        "id": 1,
+        "planName": "Basic",
+        "planTitle" : "4 Classes / Month",
+        "MRP": " ",
+        "sellingPrice": 130,
+        "offer": " ",
+        "currencySymbol": "RM",
+        "paymentLink": "https://rzp.io/l/4class-off-MR",
+        "classDuration": 60,
+        "classCount": 4,
+        "validity": "1 Month",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-none"
+
+      },
+      {
+        "id": 2,
+        "planName": "Most-Selling",
+        "planTitle" : "12 Classes / Quarter",
+        "MRP": 390,
+        "sellingPrice": 350,
+        "offer": 10,
+        "currencySymbol": "RM",
+        "paymentLink": "https://rzp.io/l/12class-off-MR",
+        "classDuration": 60,
+        "classCount": 12,
+        "validity": "3 months",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-block"
+
+      },
+      {
+        "id": 3,
+        "planName": "Standard",
+        "planTitle" : "8 Classes / Month",
+        "MRP": 240,
+        "sellingPrice": 210,
+        "offer": 13,
+        "currencySymbol": "RM",
+        "paymentLink": "https://rzp.io/l/8class-off-MR",
+        "classDuration": 45,
+        "classCount": 8,
+        "validity": "1 month",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-block"
+
+      },
+      {
+        "id": 4,
+        "planName": "Value-Pack",
+        "planTitle" : "24 Classes / Quarter",
+        "MRP": 720,
+        "sellingPrice": 599,
+        "offer": 17,
+        "currencySymbol": "RM",
+        "paymentLink": "https://rzp.io/l/24class-off-MR",
+        "classDuration": 45,
+        "classCount": 24,
+        "validity": "3 months",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-block"
+
+      },
+      {
+        "id": 5,
+        "planName": "VIP",
+        "planTitle" : "48 Classes",
+        "MRP": null,
+        "sellingPrice": null,
+        "offer": "d-none",
+        "currencySymbol": "€",
+        "paymentLink": "",
+        "classDuration": 45,
+        "classCount": 48,
+        "validity": "2 years",
+        "benefits1": {
+          "content":"Classes can be split among family & friends",
+          "display": "d-block"
+      },
+      "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-none"
+      },
+        "status":"inActive"
+
+
+      },
+      {
+        "id": 6,
+        "planName": "VVIP",
+        "planTitle" : "96 Classes / Month",
+        "MRP": null,
+        "sellingPrice": null,
+        "offer": null,
+        "currencySymbol": "€",
+        "paymentLink": "",
+        "classDuration": 45,
+        "classCount": 96,
+        "validity": "3 years",
+        "benefits1": {
+          "content":"Classes can be split among family & friends",
+          "display": "d-block"
+      },
+      "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-block"
+      },
+        "status":"inActive"
+      }
+      ],
+    "gulf":[
+      {
+        "id": 1,
+        "planName": "Basic",
+        "planTitle" : "4 Classes / Month",
+        "MRP": " ",
+        "sellingPrice": 130,
+        "offer": " ",
+        "currencySymbol": "AED",
+        "paymentLink": "https://rzp.io/l/4class-off-AED",
+        "classDuration": 60,
+        "classCount": 4,
+        "validity": "1 Month",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-none"
+
+      },
+      {
+        "id": 2,
+        "planName": "Most-Selling",
+        "planTitle" : "12 Classes / Quarter",
+        "MRP": 390,
+        "sellingPrice": 350,
+        "offer": 10,
+        "currencySymbol": "AED",
+        "paymentLink": "https://rzp.io/l/12class-off-AED",
+        "classDuration": 60,
+        "classCount": 12,
+        "validity": "3 months",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-block"
+
+      },
+      {
+        "id": 3,
+        "planName": "Standard",
+        "planTitle" : "8 Classes / Month",
+        "MRP": 240,
+        "sellingPrice": 210,
+        "offer": 13,
+        "currencySymbol": "AED",
+        "paymentLink": "https://rzp.io/l/8class-off-AED",
+        "classDuration": 45,
+        "classCount": 8,
+        "validity": "1 month",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-block"
+
+      },
+      {
+        "id": 4,
+        "planName": "Value-Pack",
+        "planTitle" : "24 Classes / Quarter",
+        "MRP": 720,
+        "sellingPrice": 599,
+        "offer": 17,
+        "currencySymbol": "AED",
+        "paymentLink": "https://rzp.io/l/24class-off-AED",
+        "classDuration": 45,
+        "classCount": 24,
+        "validity": "3 months",
+        "status":"active",
+        "benefits1": {
+          "content": "",
+          "display": "d-none"
+      },
+      "benefits2": {
+        "content":"",
+        "display":"d-none"
+      },
+        "display":"d-block"
+
+      },
+      {
+        "id": 5,
+        "planName": "VIP",
+        "planTitle" : "48 Classes",
+        "MRP": null,
+        "sellingPrice": null,
+        "offer": "d-none",
+        "currencySymbol": "€",
+        "paymentLink": "",
+        "classDuration": 45,
+        "classCount": 48,
+        "validity": "2 years",
+        "benefits1": {
+          "content":"Classes can be split among family & friends",
+          "display": "d-block"
+      },
+      "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-none"
+      },
+        "status":"inActive"
+
+
+      },
+      {
+        "id": 6,
+        "planName": "VVIP",
+        "planTitle" : "96 Classes",
+        "MRP": null,
+        "sellingPrice": null,
+        "offer": null,
+        "currencySymbol": "€",
+        "paymentLink": "",
+        "classDuration": 45,
+        "classCount": 96,
+        "validity": "3 years",
+        "benefits1": {
+          "content":"Classes can be split among family & friends",
+          "display": "d-block"
+      },
+      "benefits2": {
+          "content":"One Grade Exam fees on the house",
+          "display":"d-block"
+      },
+        "status":"inActive"
+      }
+    ]  
+
+
+  }
