@@ -1,0 +1,245 @@
+# 🏗 Store URL Restructure – Redirect Plan (March 2026)
+
+## 🎯 Goal
+
+* Replace old WooCommerce URL structure
+* Introduce clean Next.js hierarchy
+* Preserve SEO signals
+* Avoid 404 errors
+* Avoid manual 200-product redirect list
+* Keep infra simple (CloudFront → ALB → Apache → Next.js)
+
+---
+
+# 1️⃣ URL Change Overview
+
+## 🔹 Old Structure
+
+```
+/store/i-bamboo-flutes/{product-slug}/
+```
+
+Example:
+
+```
+/store/i-bamboo-flutes/b-bass-carnatic-flute-shruthi-kattai-7/
+```
+
+---
+
+## 🔹 New Structure
+
+```
+/store/flute/{subcategory}/{clean-slug}
+```
+
+Examples:
+
+```
+/store/flute/carnatic-flute/b-bass-carnatic-flute-7
+/store/flute/bansuri-flute/c-sharp-bansuri
+```
+
+Changes include:
+
+* Root folder change
+  `i-bamboo-flutes` → `flute`
+* Subcategory introduced
+  `carnatic-flute`, `bansuri-flute`
+* Product slug shortened
+  removed words like `-shruthi-kattai`
+
+---
+
+# 2️⃣ Business Reality Assessment
+
+* Only **1 landing page URL** publicly promoted
+* Product URLs not used in ads/social
+* ~18 URLs manually visited in founder browser
+* Very low SEO footprint
+* ~200 total products
+
+Conclusion:
+
+This is early-stage restructuring.
+Low SEO risk if handled cleanly.
+
+---
+
+# 3️⃣ Redirect Strategy (Layered Approach)
+
+We split responsibilities:
+
+| Layer   | Responsibility                 |
+| ------- | ------------------------------ |
+| Apache  | Broad structural redirect      |
+| Next.js | Intelligent canonical redirect |
+
+Clean separation.
+
+---
+
+# 4️⃣ Layer 1 – Apache Umbrella Redirect
+
+### Purpose:
+
+Prevent 404 for all old product URLs.
+
+### Rule Concept:
+
+Redirect:
+
+```
+/store/i-bamboo-flutes/*
+```
+
+To:
+
+```
+/store/flute/*
+```
+
+Example behavior:
+
+Old:
+
+```
+/store/i-bamboo-flutes/b-bass-carnatic-flute-shruthi-kattai-7/
+```
+
+Becomes:
+
+```
+/store/flute/b-bass-carnatic-flute-shruthi-kattai-7
+```
+
+This:
+
+* Instantly protects all legacy product URLs
+* Avoids 200 manual redirect entries
+* Ensures no broken pages
+
+---
+
+# 5️⃣ Layer 2 – Next.js Canonical Redirect Logic
+
+When Next.js receives:
+
+```
+/store/flute/b-bass-carnatic-flute-shruthi-kattai-7
+```
+
+It should:
+
+1. Look up product by slug
+2. Detect actual category (carnatic / bansuri)
+3. Generate canonical URL:
+
+   * `/store/flute/carnatic-flute/b-bass-carnatic-flute-7`
+4. Issue **301 permanent redirect**
+
+This ensures:
+
+* Correct subcategory routing
+* Clean slug normalization
+* SEO-safe canonical structure
+* No duplicate content
+
+---
+
+# 6️⃣ Landing Page Redirect
+
+The one publicly used landing page:
+
+Must have explicit 301 redirect.
+
+No pattern logic.
+One direct rule.
+
+---
+
+# 7️⃣ What We Are NOT Doing
+
+❌ No CloudFront Lambda redirects
+❌ No 200-line Apache redirect list
+❌ No WordPress redirect plugin
+❌ No partial redirect coverage
+❌ No leaving old URLs as 200
+
+---
+
+# 8️⃣ SEO Safety Measures
+
+* All redirects must be **301 (permanent)**
+* Old URLs must never return 200
+* Canonical tags must match new URLs
+* Sitemap must be regenerated
+* Submit new sitemap in Google Search Console
+* Monitor for crawl errors
+
+---
+
+# 9️⃣ Risk Assessment
+
+| Risk                        | Level      | Mitigation                 |
+| --------------------------- | ---------- | -------------------------- |
+| SEO drop                    | Low        | 301 redirects              |
+| 404 errors                  | Prevented  | Umbrella redirect          |
+| Duplicate content           | Prevented  | Canonical redirect in Next |
+| Manual redirect maintenance | Eliminated | Pattern-based system       |
+
+Overall Risk: **Low**
+
+---
+
+# 🔟 Rollback Plan
+
+If anything breaks:
+
+1. Remove Apache umbrella redirect
+2. Switch proxy back to WordPress
+3. Restart Apache
+
+System returns to old Woo URLs instantly.
+
+No DB impact.
+No SSL impact.
+No DNS change.
+
+---
+
+# 🧠 Architectural Position
+
+This approach:
+
+* Keeps infra simple
+* Uses Apache for structural routing
+* Uses Next.js for intelligent canonicalization
+* Avoids over-engineering
+* Scales cleanly to 200+ products
+
+---
+
+# ✅ Final Decision Summary
+
+We will:
+
+1. Add umbrella redirect for `/store/i-bamboo-flutes/*`
+2. Let Next.js determine final canonical subcategory URL
+3. Add explicit redirect for one public landing page
+4. Update sitemap and resubmit
+5. Monitor Search Console
+
+No mass manual redirect sheet required.
+
+---
+
+This is clean. Controlled. Professional.
+
+If you want next, I can give:
+
+* Exact Apache rewrite block ready to paste
+  OR
+* Exact Next.js canonical middleware logic structure
+
+Tell me which layer you want to implement first.
