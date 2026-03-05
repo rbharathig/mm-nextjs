@@ -1,17 +1,17 @@
 import { useState } from "react"
-import type { GetServerSideProps } from "next"
+import { GetServerSideProps } from "next"
 import Head from "next/head"
 
-import ProductGallery from "@/store/core/ProductGallery"
-import VariantSelector from "@/store/core/VariantSelector"
-import QuantitySelector from "@/store/core/QuantitySelector"
-import AddToCartButton from "@/store/core/AddToCartButton"
-import ProductTabs from "@/store/core/ProductTabs"
-import MobileStickyCart from "@/store/core/MobileStickyCart"
-import WhatsAppCTA from "@/store/core/WhatsAppCTA"
-import { Variant } from "@/store/core/types"
+import ProductGallery from "../components//store/core/ProductGallery"
+import VariantSelector from "../components//store/core/VariantSelector"
+import QuantitySelector from "../components//store/core/QuantitySelector"
+import AddToCartButton from "../components//store/core/AddToCartButton"
+import ProductTabs from "../components//store/core/ProductTabs"
+import MobileStickyCart from "../components//store/core/MobileStickyCart"
+import WhatsAppCTA from "../components//store/core/WhatsAppCTA"
+import { Variant } from "../components/store/core/types"
 
-import TrustIcons from "@/components/store/TrustIcons"
+import TrustIcons from "../components/store/TrustIcons"
 
 export default function TestProductPage({ product, variations }: any) {
   const [selected, setSelected] = useState<Variant>(variations[0])

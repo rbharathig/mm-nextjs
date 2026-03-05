@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react"
+import Image from "next/image"
+import dynamic from "next/dynamic"
+import * as AspectRatio from "@radix-ui/react-aspect-ratio"
 import { Variant } from "./types"
-import Lightbox from "./Lightbox"
+
+// PageSpeed: Code-split Lightbox to reduce initial JS bundle size
+const Lightbox = dynamic(() => import("./Lightbox"), { ssr: false })
 
 export default function ProductGallery({
   product,
@@ -12,7 +17,8 @@ export default function ProductGallery({
   const [activeIndex, setActiveIndex] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
-  const galleryImages = selected.image
+  // Logic preserved from your working version
+  const galleryImages = selected?.image
     ? [selected.image, ...product.images.map((i: any) => i.src)]
     : product.images.map((i: any) => i.src)
 
@@ -20,70 +26,89 @@ export default function ProductGallery({
     setActiveIndex(0)
   }, [selected])
 
-  const prevImage = () =>
-    setActiveIndex((prev) =>
-      prev === 0 ? galleryImages.length - 1 : prev - 1
-    )
+  const prevImage = () => {
+    setActiveIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1))
+  }
 
-  const nextImage = () =>
-    setActiveIndex((prev) =>
-      prev === galleryImages.length - 1 ? 0 : prev + 1
-    )
+  const nextImage = () => {
+    setActiveIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1))
+  }
 
   return (
-    <>
-      <div className="bg-white rounded-2xl shadow-sm p-4 lg:p-6 space-y-4">
-        <div className="relative aspect-square flex items-center justify-center">
-          <img
-            src={galleryImages[activeIndex]}
-            alt={product.name}
+    <div className="w-full space-y-6">
+      {/* Main Display: Uses Radix AspectRatio for zero CLS */}
+      <div className="relative group bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm">
+        <AspectRatio.Root ratio={1}>
+          <div 
             onClick={() => setLightboxOpen(true)}
-            className="max-h-[320px] sm:max-h-[380px] lg:max-h-[420px] object-contain cursor-zoom-in"
-          />
-
-          <button
-            onClick={prevImage}
-            className="absolute left-2 bg-white/90 shadow rounded-full w-9 h-9 flex items-center justify-center"
+            className="w-full h-full cursor-zoom-in relative flex items-center justify-center p-6"
           >
-            ‹
-          </button>
+            <Image
+              src={galleryImages[activeIndex]}
+              alt={product.name}
+              fill
+              priority // LCP Optimization: Tells Next.js to preload this specific optimized version
+              className="object-contain transition-transform duration-700 group-hover:scale-105"
+              // PageSpeed: Specific sizes prevent loading overly large images on mobile
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+            />
+          </div>
+        </AspectRatio.Root>
 
-          <button
-            onClick={nextImage}
-            className="absolute right-2 bg-white/90 shadow rounded-full w-9 h-9 flex items-center justify-center"
-          >
-            ›
-          </button>
-        </div>
+        {/* Navigation Overlays */}
+        {galleryImages.length > 1 && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 h-11 w-11 flex items-center justify-center bg-white/90 backdrop-blur-sm shadow-lg rounded-full text-2xl hover:bg-white transition-all opacity-0 group-hover:opacity-100"
+            >
+              ‹
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 h-11 w-11 flex items-center justify-center bg-white/90 backdrop-blur-sm shadow-lg rounded-full text-2xl hover:bg-white transition-all opacity-0 group-hover:opacity-100"
+            >
+              ›
+            </button>
+          </>
+        )}
+      </div>
 
-        <div className="flex gap-3 overflow-x-auto pb-2">
+      {/* Optimized Thumbnails Tray */}
+      {galleryImages.length > 1 && (
+        <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
           {galleryImages.map((img: string, index: number) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg border ${
+              className={`relative flex-shrink-0 w-20 h-20 rounded-2xl border-2 transition-all duration-200 ${
                 activeIndex === index
-                  ? "border-emerald-600"
-                  : "border-gray-200"
+                  ? "border-emerald-500 ring-4 ring-emerald-50"
+                  : "border-gray-100 opacity-70 hover:opacity-100"
               }`}
             >
-              <img
+              <Image
                 src={img}
-                className="w-full h-full object-contain rounded-lg"
+                alt="thumbnail"
+                fill
+                sizes="80px"
+                className="object-contain p-1"
               />
             </button>
           ))}
         </div>
-      </div>
+      )}
 
-      <Lightbox
-        open={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-        images={galleryImages}
-        activeIndex={activeIndex}
-        prev={prevImage}
-        next={nextImage}
-      />
-    </>
+      {lightboxOpen && (
+        <Lightbox
+          open={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+          images={galleryImages}
+          activeIndex={activeIndex}
+          prev={prevImage}
+          next={nextImage}
+        />
+      )}
+    </div>
   )
 }
