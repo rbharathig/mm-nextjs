@@ -15,7 +15,6 @@ import ShortDescription from "../../../../components/store/core/ShortDescription
 import ProductTabs from "../../../../components/store/core/ProductTabs"
 import MobileStickyCart from "../../../../components/store/core/MobileStickyCart"
 import RatingBadge from "../../../../components/store/core/RatingBadge"
-import Breadcrumb from "../../../../components/store/core/Breadcrumb"
 import { Variant } from "../../../../components/store/core/types"
 
 // =============================================================================
@@ -58,8 +57,6 @@ export default function ProductPage({ product, variations }: any) {
 
       <div className="min-h-screen pt-[70px] lg:pt-[40px] bg-[#fafaf8]">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8 lg:py-10 space-y-8 lg:space-y-10">
-
-          <Breadcrumb items={product.breadcrumbs} />
 
           <WhatsAppCTA />
 
@@ -113,7 +110,7 @@ export default function ProductPage({ product, variations }: any) {
         <ProductTabs
           product={product}
           specsHtml={product.specsHtml}
-          faqItems={product.faqItems}
+          faqContent={product.faqContent}
         />
 
         <MobileStickyCart
@@ -154,37 +151,37 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
   }
 
-  // 3. Specs — from yikes_woo_products_tabs meta
+  // 3. Extract yikes_woo_products_tabs (Specs + FAQ)
   const wooTabs: any[] =
     raw.meta_data?.find((m: any) => m.key === "yikes_woo_products_tabs")?.value || []
 
   const specsTab = wooTabs.find(
     (t: any) => t.id === "specs" || t.title?.toLowerCase().includes("spec")
   )
+  const faqTab = wooTabs.find(
+    (t: any) =>
+      t.id === "f-q" ||
+      t.title?.toLowerCase().includes("faq") ||
+      t.title?.toLowerCase().includes("f & q")
+  )
+
+  // FAQ tab uses a WP shortcode — pass raw content; plugin renders on WP side.
+  // We display it as HTML if it's already HTML, or show a note if shortcode-only.
   const specsHtml: string | null = specsTab?.content || null
+  const faqContent: string | null = faqTab?.content || null
 
-  // 4. FAQs — from mm_faq_items (registered by mm-product-faq plugin as a
-  //    top-level REST field, so it appears directly on the raw product object,
-  //    not nested inside meta_data[])
-  const faqItems: { question: string; answer: string }[] =
-    Array.isArray(raw.mm_faq_items) ? raw.mm_faq_items : []
-
-  // 5. SEO meta
+  // 4. SEO meta
   const seoDescription =
     raw.meta_data?.find((m: any) => m.key === "rank_math_description")?.value ||
     raw.meta_data?.find((m: any) => m.key === "_yoast_wpseo_metadesc")?.value ||
     null
 
-  // 6. Normalize product
-  const primaryCategory = raw.categories?.[0]
-  const categoryLabel = primaryCategory?.name || "Flutes"
-  const categorySlug = primaryCategory?.slug || subcategory
-
+  // 5. Normalize product
   const product = {
     id: raw.id,
     name: raw.name,
     slug: raw.slug,
-    type: raw.type,
+    type: raw.type,               // "simple" | "variable"
     description: raw.description,
     short_description: raw.short_description,
     images: raw.images,
@@ -195,17 +192,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     averageRating: Number(raw.average_rating),
     ratingCount: Number(raw.rating_count),
     specsHtml,
-    faqItems,
+    faqContent,
     seoDescription,
-    breadcrumbs: [
-      { label: "Store", href: "/store" },
-      { label: "Flutes", href: "/store/flute" },
-      { label: categoryLabel, href: `/store/flute/${categorySlug}` },
-      { label: raw.name },
-    ],
   }
 
-  // 7. Fetch variations (variable products only)
+  // 6. Fetch variations (variable products only)
   let variations: Variant[] = []
 
   if (raw.type === "variable") {
